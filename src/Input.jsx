@@ -9,7 +9,7 @@ const Input = ({
 }) => {
   return (
     <form className="container" onSubmit={submitHandler}>
-      <h2>Animated & Autocomplet Search Bar</h2>
+      <h2>Animated & Autocomplete Search Bar</h2>
       <div className={`input ${isOpen && "active-search"}`}>
         {isOpen && <label htmlFor="input">{hint}</label>}
         <input
