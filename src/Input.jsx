@@ -5,9 +5,10 @@ const Input = ({
   toggleHandler,
   isOpen,
   searchedValue,
+  submitHandler,
 }) => {
   return (
-    <div className="container">
+    <form className="container" onSubmit={submitHandler}>
       <h2>Animated & Autocomplet Search Bar</h2>
       <div className={`input ${isOpen && "active-search"}`}>
         {isOpen && <label htmlFor="input">{hint}</label>}
@@ -52,7 +53,7 @@ const Input = ({
           </svg>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 

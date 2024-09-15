@@ -16,13 +16,17 @@ function App() {
   }, [searchedValue]);
 
   function handleChange(event) {
-    setHint("");
     setSearchedValue(event.target.value);
   }
   function toggleHandler() {
     setIsOpen((prev) => !prev);
     setHint("");
     setSearchedValue("");
+  }
+  function submitHandler(e) {
+    e.preventDefault();
+    setSearchedValue(hint);
+    setHint("");
   }
   return (
     <Input
@@ -31,6 +35,7 @@ function App() {
       toggleHandler={toggleHandler}
       isOpen={isOpen}
       searchedValue={searchedValue}
+      submitHandler={submitHandler}
     />
   );
 }
