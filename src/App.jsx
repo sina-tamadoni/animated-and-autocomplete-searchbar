@@ -16,6 +16,7 @@ function App() {
   }, [searchedValue]);
 
   function handleChange(event) {
+    setHint("");
     setSearchedValue(event.target.value);
   }
   function toggleHandler() {
